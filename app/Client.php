@@ -20,4 +20,9 @@ class Client extends Model
 		return $select;
 	}
 
+	public function consultant()
+	{
+		return $this->belongsTo('App\Consultant', 'consultant_id', 'id');
+	}
+
 }
