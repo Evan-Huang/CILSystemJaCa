@@ -1,0 +1,7 @@
+.header__topmenu__caption a{
+    color: #000000;
+}
+
+.header__topmenu__caption a:hover{
+    color: #68bb8b;
+}
