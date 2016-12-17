@@ -1,0 +1,198 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class PlanTableSeeder extends Seeder
+{
+
+    //產品數量
+    const PLAN_NUM = 10;
+
+    public function run()
+    {
+
+
+        //AXA供應商添加產品
+
+                factory(App\Plan::class)->create([
+                    'plan_category_id' => 1,
+                    'provider_id' => 1,
+                    'name' => 'HealthVital Major Illness Insurance – 10 Years',
+                    'code' => 'HMII10',
+                    'term' => '10 years',
+                    'requirement' => 'requirement',
+                    'description' => 'cut off around 15 each month, pay date around 20th each month',
+                    'rate_monthly' => 0,
+                    'rate_yearly' => 0.495,
+                    'rate_1_basic' => 0.495,
+                    'rate_1_override' => 0,
+                    'rate_1_bonus' => 0,
+                    'rate_2_basic' => 0.495,
+                    'rate_2_override' => 0.13,
+                    'rate_2_bonus' => 0,
+                    'rate_3_basic' => 0.625,
+                    'rate_3_override' => 0.02,
+                    'rate_3_bonus' => 0,
+                    'rate_4_basic' => 0.645,
+                    'rate_4_override' => 0.02,
+                    'rate_4_bonus' => 0,
+                    'rate_5_basic' => 0.665,
+                    'rate_5_override' => 0.02,
+                    'rate_5_bonus' => 0,
+                    'rate_6_basic' => 0.685,
+                    'rate_6_override' => 0.02,
+                    'rate_6_bonus' => 0,
+                    'rate_7_basic' => 0.702,
+                    'rate_7_override' => 0.02,
+                    'rate_7_bonus' => 0,
+                    'rate_8_basic' => 0.722,
+                    'rate_8_override' => 0.02,
+                    'rate_8_bonus' => 0,
+                    'rate_9_basic' => 0.742,
+                    'rate_9_override' => 0.02,
+                    'rate_9_bonus' => 0,
+                    'rate_10_basic' => 0.762,
+                    'rate_10_override' => 0.07,
+                    'rate_10_bonus' => 0,
+                    'annual_premium' => 10000,
+                ]);
+
+                factory(App\Plan::class)->create([
+                    'plan_category_id' => 1,
+                    'provider_id' => 1,
+                    'name' => 'HealthVital Major Illness Insurance – 15 Years',
+                    'code' => 'HMII15',
+                    'term' => '15 years',
+                    //虛擬數據
+                    'requirement' => 'requirement',
+                    //虛擬數據
+                    'description' => 'cut off around 15 each month, pay date around 20th each month',
+                    'rate_monthly' => 0,
+                    'rate_yearly' => 0.66,
+                    'rate_1_basic' => 0.66,
+                    'rate_1_override' => 0,
+                    'rate_1_bonus' => 0.66,
+                    'rate_2_basic' => 0.66,
+                    'rate_2_override' => 0.27,
+                    'rate_2_bonus' => 0.93,
+                    'rate_3_basic' => 0.93,
+                    'rate_3_override' => 0.05,
+                    'rate_3_bonus' => 0.98,
+                    'rate_4_basic' => 0.98,
+                    'rate_4_override' => 0.05,
+                    'rate_4_bonus' => 1.03,
+                    'rate_5_basic' => 1.03,
+                    'rate_5_override' => 0.07,
+                    'rate_5_bonus' => 1.10,
+                    'rate_6_basic' => 1.10,
+                    'rate_6_override' => 0.07,
+                    'rate_6_bonus' => 1.17,
+                    'rate_7_basic' => 1.17,
+                    'rate_7_override' => 0.07,
+                    'rate_7_bonus' => 1.24,
+                    'rate_8_basic' => 1.24,
+                    'rate_8_override' => 0.07,
+                    'rate_8_bonus' => 1.31,
+                    'rate_9_basic' => 1.31,
+                    'rate_9_override' => 0.07,
+                    'rate_9_bonus' => 1.38,
+                    'rate_10_basic' => 1.38,
+                    'rate_10_override' => 0.11,
+                    'rate_10_bonus' => 1.49,
+                    'annual_premium' => 10000,
+                ]);
+
+                factory(App\Plan::class)->create([
+                    'plan_category_id' => 1,
+                    'provider_id' => 1,
+                    'name' => 'HealthVital Major Illness Insurance – 20 Years',
+                    'code' => 'HMII20',
+                    'term' => '20 years',
+                    //虛擬數據
+                    'requirement' => 'requirement',
+                    //虛擬數據
+                    'description' => 'cut off around 15 each month, pay date around 20th each month',
+                    'rate_monthly' => 0,
+                    'rate_yearly' => 0.825,
+                    'rate_1_basic' => 0.825,
+                    'rate_1_override' => 0,
+                    'rate_1_bonus' => 0.825,
+                    'rate_2_basic' => 0.825,
+                    'rate_2_override' => 0.33,
+                    'rate_2_bonus' => 1.155,
+                    'rate_3_basic' => 1.155,
+                    'rate_3_override' => 0.05,
+                    'rate_3_bonus' => 1.205,
+                    'rate_4_basic' => 1.205,
+                    'rate_4_override' => 0.05,
+                    'rate_4_bonus' => 1.255,
+                    'rate_5_basic' => 1.255,
+                    'rate_5_override' => 0.07,
+                    'rate_5_bonus' => 1.325,
+                    'rate_6_basic' => 1.325,
+                    'rate_6_override' => 0.07,
+                    'rate_6_bonus' => 1.395,
+                    'rate_7_basic' => 1.395,
+                    'rate_7_override' => 0.07,
+                    'rate_7_bonus' => 1.465,
+                    'rate_8_basic' => 1.465,
+                    'rate_8_override' => 0.07,
+                    'rate_8_bonus' => 1.535,
+                    'rate_9_basic' => 1.535,
+                    'rate_9_override' => 0.07,
+                    'rate_9_bonus' => 1.605,
+                    'rate_10_basic' => 1.605,
+                    'rate_10_override' => 0.15,
+                    'rate_10_bonus' => 1.755,
+                    'annual_premium' => 10000,
+                ]);
+
+                factory(App\Plan::class)->create([
+                    'plan_category_id' => 1,
+                    'provider_id' => 1,
+                    'name' => 'HealthVital Major Illness Insurance – 25 Years',
+                    'code' => 'HMII25',
+                    'term' => '25 years',
+                    //虛擬數據
+                    'requirement' => 'requirement',
+                    //虛擬數據
+                    'description' => 'cut off around 15 each month, pay date around 20th each month',
+                    'rate_monthly' => 0,
+                    'rate_yearly' => 0.843,
+                    'rate_1_basic' => 0.843,
+                    'rate_1_override' => 0,
+                    'rate_1_bonus' => 0.843,
+                    'rate_2_basic' => 0.843,
+                    'rate_2_override' => 0.33,
+                    'rate_2_bonus' => 1.173,
+                    'rate_3_basic' => 1.173,
+                    'rate_3_override' => 0.05,
+                    'rate_3_bonus' => 1.223,
+                    'rate_4_basic' => 1.223,
+                    'rate_4_override' => 0.05,
+                    'rate_4_bonus' => 1.273,
+                    'rate_5_basic' => 1.273,
+                    'rate_5_override' => 0.07,
+                    'rate_5_bonus' => 1.343,
+                    'rate_6_basic' => 1.343,
+                    'rate_6_override' => 0.07,
+                    'rate_6_bonus' => 1.413,
+                    'rate_7_basic' => 1.413,
+                    'rate_7_override' => 0.07,
+                    'rate_7_bonus' => 1.483,
+                    'rate_8_basic' => 1.483,
+                    'rate_8_override' => 0.07,
+                    'rate_8_bonus' => 1.553,
+                    'rate_9_basic' => 1.553,
+                    'rate_9_override' => 0.07,
+                    'rate_9_bonus' => 1.623,
+                    'rate_10_basic' => 1.623,
+                    'rate_10_override' => 0.16,
+                    'rate_10_bonus' => 1.783,
+                    'annual_premium' => 10000,
+                ]);
+
+
+
+    }
+}
