@@ -28,8 +28,8 @@ $factory->define(App\Provider::class, function (Faker\Generator $faker) {
         'name' => '',
         'description' => '',
         'process_days' => '' ,
-        'created_at' => $faker->dateTime  ,
-        'updated_at' => $faker->dateTime ,
+        'created_at' => date('Y-m-d H:i:s',time()),
+        'updated_at' => date('Y-m-d H:i:s',time()),
     ];
 });
 
@@ -64,8 +64,8 @@ $factory->define(App\Client::class, function (Faker\Generator $faker) {
         'business_nature' => $faker->randomElement($business_nature),
         'company' => $faker->company,
         'office_phone_number' => $faker->phoneNumber,
-        'created_at' => $faker->dateTime  ,
-        'updated_at' => $faker->dateTime ,
+        'created_at' => date('Y-m-d H:i:s',time()),
+        'updated_at' => date('Y-m-d H:i:s',time()),
     ];
 });
 
@@ -81,8 +81,8 @@ $factory->define(App\Consultant::class, function (Faker\Generator $faker) {
         'band_id' => $faker->randomElement($band_ids),
         'manager_id' => $faker->randomElement($manager_ids),
         'override_for_manager' => $faker->randomFloat($nbMaxDecimals = 2,$min = 0, $max = 1000),
-        'created_at' => $faker->dateTime  ,
-        'updated_at' => $faker->dateTime ,
+        'created_at' => date('Y-m-d H:i:s',time()),
+        'updated_at' => date('Y-m-d H:i:s',time()),
 
     ];
 });
@@ -93,51 +93,51 @@ $factory->define(App\Plan::class, function (Faker\Generator $faker) {
     $rates = array(0.15,0.2);
 
     return [
-        'plan_category_id' => '',
+        'plan_category_id' => 0,
         'provider_id' => 1,
-        'name' => '1',
-        'code' => '1',
+        'name' => 'null',
+        'code' => 'code',
         'term' => '',
         'requirement' => 'requirement',
-        'description' => '這是一種保險',
-        'rate_monthly' => 100,
-        'rate_yearly' => 100,
-        'rate_1_basic' => 0.1,
-        'rate_1_override' => $faker->randomElement($rates),
-        'rate_1_bonus' => $faker->randomElement($rates),
-        'rate_2_basic' => 0.1,
-        'rate_2_override' => $faker->randomElement($rates),
-        'rate_2_bonus' => $faker->randomElement($rates),
-        'rate_3_basic' => 0.1,
-        'rate_3_override' => $faker->randomElement($rates),
-        'rate_3_bonus' => $faker->randomElement($rates),
-        'rate_4_basic' => 0.1,
-        'rate_4_override' => $faker->randomElement($rates),
-        'rate_4_bonus' => $faker->randomElement($rates),
-        'rate_5_basic' => 0.1,
-        'rate_5_override' => $faker->randomElement($rates),
-        'rate_5_bonus' => $faker->randomElement($rates),
-        'rate_6_basic' => 0.1,
-        'rate_6_override' => $faker->randomElement($rates),
-        'rate_6_bonus' => $faker->randomElement($rates),
-        'rate_7_basic' => 0.1,
-        'rate_7_override' => $faker->randomElement($rates),
-        'rate_7_bonus' => $faker->randomElement($rates),
-        'rate_8_basic' => 0.1,
-        'rate_8_override' => $faker->randomElement($rates),
-        'rate_8_bonus' => $faker->randomElement($rates),
+        'description' => '',
+        'rate_monthly' => 0,
+        'rate_yearly' => 0,
+        'rate_1_basic' => 0,
+        'rate_1_override' => 0,
+        'rate_1_bonus' => 0,
+        'rate_2_basic' => 0,
+        'rate_2_override' => 0,
+        'rate_2_bonus' => 0,
+        'rate_3_basic' => 0,
+        'rate_3_override' => 0,
+        'rate_3_bonus' => 0,
+        'rate_4_basic' => 0,
+        'rate_4_override' => 0,
+        'rate_4_bonus' => 0,
+        'rate_5_basic' => 0,
+        'rate_5_override' => 0,
+        'rate_5_bonus' => 0,
+        'rate_6_basic' => 0,
+        'rate_6_override' => 0,
+        'rate_6_bonus' => 0,
+        'rate_7_basic' => 0,
+        'rate_7_override' => 0,
+        'rate_7_bonus' => 0,
+        'rate_8_basic' => 0,
+        'rate_8_override' => 0,
+        'rate_8_bonus' => 0,
         'rate_9_basic' => 0.1,
-        'rate_9_override' => $faker->randomElement($rates),
-        'rate_9_bonus' => $faker->randomElement($rates),
-        'rate_10_basic' => 0.1,
-        'rate_10_override' => $faker->randomElement($rates),
-        'rate_10_bonus' => $faker->randomElement($rates),
-        'rate_11up_basic' => 0.1,
-        'rate_11up_override' => $faker->randomElement($rates),
-        'rate_11up_bonus' => $faker->randomElement($rates),
-        'annual_premium' => $faker->randomFloat($nbMaxDecimals = 2,$min = 1000,$max = 1000000),
-        'created_at' => $faker->dateTime  ,
-        'updated_at' => $faker->dateTime ,
+        'rate_9_override' => 0,
+        'rate_9_bonus' => 0,
+        'rate_10_basic' => 0,
+        'rate_10_override' => 0,
+        'rate_10_bonus' => 0,
+        'rate_11up_basic' => 0,
+        'rate_11up_override' => 0,
+        'rate_11up_bonus' => 0,
+        'annual_premium' => 0,
+        'created_at' => date('Y-m-d H:i:s',time()),
+        'updated_at' => date('Y-m-d H:i:s',time()),
     ];
 });
 
@@ -146,8 +146,8 @@ $factory->define(App\PlanCategory::class, function (Faker\Generator $faker) {
 
     return [
         'name' => '',
-        'created_at' => $faker->dateTime  ,
-        'updated_at' => $faker->dateTime ,
+        'created_at' => date('Y-m-d H:i:s',time()),
+        'updated_at' => date('Y-m-d H:i:s',time()),
     ];
 
 });
@@ -161,8 +161,8 @@ $factory->define(App\Band::class, function (Faker\Generator $faker) {
         'profit_sharing' => 0,
         'promotion_income_achievement' => 0,
         'is_channel' => 0,
-        'created_at' => $faker->dateTime  ,
-        'updated_at' => $faker->dateTime ,
+        'created_at' => date('Y-m-d H:i:s',time()),
+        'updated_at' => date('Y-m-d H:i:s',time()),
 
     ];
 
@@ -175,8 +175,8 @@ $factory->define(App\Split::class, function (Faker\Generator $faker) {
         'slug' => $faker->slug(10),
         'name' => '',
         'rate' => 0,
-        'created_at' => $faker->dateTime  ,
-        'updated_at' => $faker->dateTime ,
+        'created_at' => date('Y-m-d H:i:s',time()),
+        'updated_at' => date('Y-m-d H:i:s',time()),
     ];
 });
 
