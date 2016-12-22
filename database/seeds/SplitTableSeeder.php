@@ -12,14 +12,24 @@ class SplitTableSeeder extends Seeder
     {
         //普通分成比例
         factory(App\Split::class, 1)->create([
-            'name' => '普通比例1',
-            'rate' => 0.1,
+            'name' => 'CIL split',
+            'rate' => 0.4,
+        ]);
+
+        factory(App\Split::class, 1)->create([
+            'name' => 'Consultant split',
+            'rate' => 0.6,
         ]);
 
         //Channel分成比例
         factory(App\Split::class, 1)->create([
-            'name' => 'Channel比例1',
-            'rate' => 0.4,
+            'name' => 'CIL split',
+            'rate' => 0.3,
+        ]);
+
+        factory(App\Split::class, 1)->create([
+            'name' => 'Channel Director split',
+            'rate' => 0.7,
         ]);
     }
 }

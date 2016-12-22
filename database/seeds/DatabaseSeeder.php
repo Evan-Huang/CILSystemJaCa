@@ -18,10 +18,10 @@ class DatabaseSeeder extends Seeder
          $this->call(ProvidersTableSeeder::class);
          $this->call(PlanCategoryTableSeeder::class);
          $this->call(PlanTableSeeder::class);
-//         $this->call(SplitTableSeeder::class);
-//         $this->call(BandTableSeeder::class);
-//         $this->call(ConsultantTableSeeder::class);
-//         $this->call(ClientTableSeeder::class);
+         $this->call(SplitTableSeeder::class);
+         $this->call(BandTableSeeder::class);
+         $this->call(ConsultantTableSeeder::class);
+         $this->call(ClientTableSeeder::class);
 
 
         Model::reguard();

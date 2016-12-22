@@ -13,9 +13,9 @@ class ProvidersTableSeeder extends Seeder
         //虛擬數據
         $slug = 'slug';
 
-        $names = array('AXA','CHUBB','Prudential','AIA','Zurich','FPI');
+        $names = array('AXA','ACE','Prudential','AIA','Zurich','FPI');
 
-        $descriptions = array('AXA Provider','CHUBB Provider','Prudential Provider','AIA Provider','Zurich Provider','FPI Provider',);
+        $descriptions = array('AXA Provider','ACE Provider','Prudential Provider','AIA Provider','Zurich Provider','FPI Provider',);
         //虛擬數據
         $process_days = array(100,120,150,100,120,150,);
 
