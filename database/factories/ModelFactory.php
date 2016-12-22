@@ -36,34 +36,25 @@ $factory->define(App\Provider::class, function (Faker\Generator $faker) {
 //Client 客戶模型工廠
 $factory->define(App\Client::class, function (Faker\Generator $faker) {
 
-        $business_types = array('type1','type2','type3','type4','type5');
-        $first_name = $faker->firstName;
-        $last_name = $faker->lastName;
-        $full_name = $first_name . ' ' . $last_name;
-        $consultant_ids = App\Consultant::all()->toArray();
-        $genders = array('male','female');
-        $nationality = array('China','Canada','Britiain','Brazil','Australia','America','Japan','Sweden');
-        $business_nature = array('nature1','nature2','nature3');
-
     return [
-        'business_type' => $faker->randomElement($business_types),
-        'full_name' => $full_name,
-        'first_name' => $first_name,
-        'last_name' => $last_name,
-        'consultant_id' => $faker->randomElement($consultant_ids)['id'],
-        'gender' => $faker->randomElement($genders),
-        'nationality' => $faker->randomElement($nationality),
-        'id_number' => $faker->userName,
-        'passport_number' => 'G' . $faker->randomNumber(8),
-        'birth_year' => $faker->year($max = 'now'),
-        'birth_month' => $faker->month($max = 'now') ,
-        'birth_day' => $faker->dayOfMonth($max = 'now'),
-        'mobile_number' => $faker->phoneNumber,
-        'email' => $faker->email,
-        'home_address' => $faker->address,
-        'business_nature' => $faker->randomElement($business_nature),
-        'company' => $faker->company,
-        'office_phone_number' => $faker->phoneNumber,
+        'business_type' => '',
+        'full_name' => '',
+        'first_name' => '',
+        'last_name' => '',
+        'consultant_id' => '',
+        'gender' => '',
+        'nationality' => '',
+        'id_number' => '',
+        'passport_number' => '',
+        'birth_year' => '',
+        'birth_month' => '' ,
+        'birth_day' => '',
+        'mobile_number' => '',
+        'email' => '',
+        'home_address' => '',
+        'business_nature' => '',
+        'company' => '',
+        'office_phone_number' => '',
         'created_at' => date('Y-m-d H:i:s',time()),
         'updated_at' => date('Y-m-d H:i:s',time()),
     ];
@@ -72,15 +63,12 @@ $factory->define(App\Client::class, function (Faker\Generator $faker) {
 //Consultant 員工模型工廠
 $factory->define(App\Consultant::class, function (Faker\Generator $faker) {
 
-//        $band_ids = App\Band::all(['id'])->toArray();
-        $band_ids = array('1','2','3','4',);
-        $manager_ids = array('1','2','3','4',);
 
     return [
-        'name' => $faker->name(),
-        'band_id' => $faker->randomElement($band_ids),
-        'manager_id' => $faker->randomElement($manager_ids),
-        'override_for_manager' => $faker->randomFloat($nbMaxDecimals = 2,$min = 0, $max = 1000),
+        'name' => '',
+        'band_id' => '',
+        'manager_id' => '',
+        'override_for_manager' => '',
         'created_at' => date('Y-m-d H:i:s',time()),
         'updated_at' => date('Y-m-d H:i:s',time()),
 
@@ -172,7 +160,7 @@ $factory->define(App\Band::class, function (Faker\Generator $faker) {
 $factory->define(App\Split::class, function (Faker\Generator $faker) {
 
     return [
-        'slug' => $faker->slug(10),
+        'slug' => 'slug',
         'name' => '',
         'rate' => 0,
         'created_at' => date('Y-m-d H:i:s',time()),
